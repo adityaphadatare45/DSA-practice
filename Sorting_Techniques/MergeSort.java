@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 class Solution {
     private static void merge(int[] arr, int low, int mid, int high) {
@@ -49,7 +48,6 @@ class Solution {
 }
 public class MergeSort {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
         int n = 7;
         int arr[] = { 9, 4, 7, 6, 3, 1, 5 };
         System.out.println("Before sorting array: ");
