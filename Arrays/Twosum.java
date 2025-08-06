@@ -18,6 +18,8 @@ class Twosum{
         }
         return new int[]{-1 ,-1};
     }
+     // Optimal approach using two-pointer
+     
     public static void main(String[] args) {
         int[] nums = {2,6,5,8,11};
         int target = 14;
@@ -25,8 +27,5 @@ class Twosum{
         int[] result = new Twosum().two_sum(nums, target);
         System.out.println("This is the answer for indices: " + result[0] + " and " + result[1]);
 
-    }
-
-    // Optimal approach using two-pointer
-    
+    }   
 }
