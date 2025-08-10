@@ -32,10 +32,10 @@ Step 3 : In this step do binary search and find out the answer.
          
 */
 
-
+// Amswer of the question.
 class KokoEats{
    
-   // To find out the max element
+   // Step 1 : To find out the max element
    public static int maxElement(int [] piles){
     int max = 0;
      for (int pile : piles) {
@@ -46,7 +46,7 @@ class KokoEats{
     return max;
    }
 
-   // To find out the hourly rate.
+   // Step 2 : To find out the hourly rate.
 
    public static int totalHrs(int [] piles, int hours){
      int totalhrs = 0;
@@ -57,10 +57,10 @@ class KokoEats{
     return totalhrs;
    }
 
-   // To finad out the minimum eating speed.
+   // Step 3 : To finad out the minimum eating speed.
 
    public static int  mineatingSpeed(int []piles, int h){
-    int low = 0, high = maxElement(piles);
+    int low = 1, high = maxElement(piles);
     int ans = high;
 
     while(low <= high){
