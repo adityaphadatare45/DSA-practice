@@ -18,7 +18,7 @@ class Main{
     }
   }
  public static void main(String[] args) {
-     int N = 5;
+     int N = 3;
      pattern2(N);
      pattern1(N);
   }
