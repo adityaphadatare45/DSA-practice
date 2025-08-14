@@ -1,6 +1,6 @@
-package  LinkedLists;
-public class DLL {
+package LinkedLists;
 
+public class Insertnode2dll {
     public static class Node{
 	  public int data;
       public Node next;
@@ -18,7 +18,8 @@ public class DLL {
         back = null;
     }
 }
-    private static Node convertarr2dll(int [] arr){
+
+ private static Node convertarr2dll(int [] arr){
       Node head = new Node(arr[0]);
       Node prev = head;
 
@@ -37,11 +38,32 @@ public class DLL {
       }
       System.out.println();
     }
-    public static void main(String[] args) {
+      // To insert new node value at tail
+    private static Node insertatTail(Node head, int k){
+        Node newNode = new Node(k);
+
+        if(head == null){
+            return newNode;
+        }
+
+        Node current = head;
+        while (current.next != null) { 
+            current = current.next;
+        }
+
+        current.next = newNode;
+        newNode.back = current; 
+        return head;
+    }
+     public static void main(String[] args) {
         int[] arr = {1,2,3,4};
         //int val = 5;
         Node head = convertarr2dll(arr);
-        System.out.println("Doubly LinkedList : ");
+        System.out.println("Doubly LinkedList Initially : ");
+        print(head);
+
+        System.out.println("Doubly LinkedList after inserting value at tail : ");
+        head = insertatTail(head, 10);
         print(head);
     }
 }
